@@ -76,7 +76,7 @@ The design has been verified using **Xilinx Vivado** through:
 - Execution of a test program covering arithmetic, branching, memory, and stack operations
 
   <img width="624" height="214" alt="image" src="https://github.com/user-attachments/assets/8693f01b-38fe-44c4-ada4-8842f70ba064" />
-  (this is a waveform simulation for a program written to test the processor)
+  *this is a waveform simulation for a program written to test the processor*
 
 ## Future Work
 
@@ -87,4 +87,4 @@ The design has been verified using **Xilinx Vivado** through:
 
 ## Documentation
 
-For a better and detailed view, check out the Full architecture report: [Astra Report](docs/Astra_Report.pdf)
+Full architecture report: [Astra Report](docs/Astra_Report.pdf)
