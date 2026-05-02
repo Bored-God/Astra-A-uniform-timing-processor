@@ -44,3 +44,28 @@ The op_code byte is further subdivided as follows:
 The Top module acts as the central decode and routing hub. On every clock cycle, the Programme block reads three bytes from program memory at the current PC address and presents them as op_code, op1, and op2. The Top module decodes op_code combinationally and asserts enable signals to exactly one functional unit per cycle. Results are written back to the register file or fed to the program counter on the next clock edge.
 
 <img width="624" height="384" alt="image" src="https://github.com/user-attachments/assets/d4444ed6-0868-423d-9e46-b85e1727c422" />
+
+## Module Overview
+
+- **ALU** – Performs arithmetic and logical operations (signed and unsigned) and updates flags.  
+- **Register File** – 8 general-purpose registers with asynchronous read and synchronous write.  
+- **Program Counter** – Advances instruction address and handles jumps/branches.  
+- **Control Logic** – Decodes opcode and enables the appropriate execution unit.  
+- **Conditional Unit** – Evaluates branch conditions based on flag values.  
+- **Stack** – Supports push/pop operations and return address handling.  
+- **RAM** – 256-byte data memory with register-indirect addressing.  
+
+## Simulation
+
+The design has been verified using **Xilinx Vivado** through:
+
+- Functional simulation of individual modules  
+- Waveform-based verification  
+- Execution of a test program covering arithmetic, branching, memory, and stack operations  
+
+## Future Work
+
+- Extend architecture to 16-bit  
+- Improve instruction encoding efficiency  
+- Add hardware CALL instruction  
+- Explore multi-cycle / pipelined design  
