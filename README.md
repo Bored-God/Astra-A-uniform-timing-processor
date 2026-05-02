@@ -76,7 +76,7 @@ The design has been verified using **Xilinx Vivado** through:
 - Execution of a test program covering arithmetic, branching, memory, and stack operations
 
   <img width="624" height="214" alt="image" src="https://github.com/user-attachments/assets/8693f01b-38fe-44c4-ada4-8842f70ba064" />
-             **Waveform showing execution of a test program.**
+*Waveform showing execution of a test program.*
 
 ## Future Work
 
