@@ -1,3 +1,5 @@
+> Personal project exploring processor architecture and RTL design using SystemVerilog
+
 # Astra - A uniform timing processor
 Astra is a minimal experimental processor architecture focused on datapath design, instruction semantics, and control logic. It emphasizes simplicity and deterministic execution to clearly demonstrate the relationship between hardware structure and instruction behavior.
 
@@ -53,7 +55,14 @@ The Top module acts as the central decode and routing hub. On every clock cycle,
 - **Control Logic** – Decodes opcode and enables the appropriate execution unit.  
 - **Conditional Unit** – Evaluates branch conditions based on flag values.  
 - **Stack** – Supports push/pop operations and return address handling.  
-- **RAM** – 256-byte data memory with register-indirect addressing.  
+- **RAM** – 256-byte data memory with register-indirect addressing.
+
+## Execution Flow
+
+- Instruction fetched from program memory  
+- Decoded by control logic  
+- Routed to execution unit (ALU / Stack / Conditional / Xtra)  
+- Result written back to register file or program counter  
 
 ## Simulation
 
@@ -61,11 +70,18 @@ The design has been verified using **Xilinx Vivado** through:
 
 - Functional simulation of individual modules  
 - Waveform-based verification  
-- Execution of a test program covering arithmetic, branching, memory, and stack operations  
+- Execution of a test program covering arithmetic, branching, memory, and stack operations
+
+  <img width="624" height="214" alt="image" src="https://github.com/user-attachments/assets/8693f01b-38fe-44c4-ada4-8842f70ba064" />
+  (this is a waveform simulation for a program written to test the processor)
 
 ## Future Work
 
 - Extend architecture to 16-bit  
 - Improve instruction encoding efficiency  
 - Add hardware CALL instruction  
-- Explore multi-cycle / pipelined design  
+- Explore multi-cycle / pipelined design
+
+## Documentation
+
+For a better and detailed view, check out the Full architecture report: [Astra Report](docs/Astra_Report.pdf)
