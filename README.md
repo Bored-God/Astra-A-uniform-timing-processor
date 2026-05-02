@@ -15,16 +15,17 @@ Astra is a minimal experimental processor architecture focused on datapath desig
 # Architectural Overview
 
 ## Key Parameters
-Signal	              Description
-Data width	        : 8 bits
-Register count	    : 8 general-purpose registers (r0-r7)
-Program memory	    : 256 bytes (up to ~85 instructions)
-Data memory(RAM)	  : 256 bytes, byte-addressable
-Stack depth	        : 256 entries, 8-bit wide
-Clock period	      : 2 ns (500 MHz, simulation only)
-Instruction size	  : 3 bytes (op_code, op1, op2)
-PC increment	      : +3 per cycle (non-branch)
-Flag register	4 bits: zero [3], overflow [2], negative [1], carry [0]
+|Signal	          |   Description  |
+|-----------------|----------------|
+|Data width	        | 8 bits |
+|Register count	    | 8 general-purpose registers (r0-r7) |
+|Program memory	    | 256 bytes (up to ~85 instructions) |
+|Data memory(RAM)	  | 256 bytes, byte-addressable |
+|Stack depth	      | 256 entries, 8-bit wide |
+|Clock period	      | 2 ns (500 MHz, simulation only) |
+|Instruction size	  | 3 bytes (op_code, op1, op2) |
+|PC increment	      | +3 per cycle (non-branch) |
+|Flag register	4 bits| zero [3], overflow [2], negative [1], carry [0] |
 
 ## Instruction Format
 
