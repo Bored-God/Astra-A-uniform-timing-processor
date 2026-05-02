@@ -38,6 +38,8 @@ Each instruction is 3 bytes:
 | op2 | Destination / operand |
 
 The op_code byte is further subdivided as follows:
+| Bit | Description|
+|------|-----------|
 |Bit [7] | mode select - 0 = calculation mode, 1 = move (MOV) mode |
 |Bits [5:4] | unit select (calculation mode only) - 00 = ALU, 01 = Conditional, 10 = Xtra, 11 = Stack |
 |Bits [3:0] | operation code within the selected unit |
