@@ -39,6 +39,7 @@ Source register / immediate value / jump address
 Byte 2: op2
 Destination register / second source register
 
+## Datapath Summary
 The Top module acts as the central decode and routing hub. On every clock cycle, the Programme block reads three bytes from program memory at the current PC address and presents them as op_code, op1, and op2. The Top module decodes op_code combinationally and asserts enable signals to exactly one functional unit per cycle. Results are written back to the register file or fed to the program counter on the next clock edge.
 
 <img width="624" height="384" alt="image" src="https://github.com/user-attachments/assets/d4444ed6-0868-423d-9e46-b85e1727c422" />
