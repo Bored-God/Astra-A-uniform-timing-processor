@@ -25,7 +25,7 @@ Astra is a minimal experimental processor architecture focused on datapath desig
 |Clock period	      | 2 ns (500 MHz, simulation only) |
 |Instruction size	  | 3 bytes (op_code, op1, op2) |
 |PC increment	      | +3 per cycle (non-branch) |
-|Flag register	4 bits| zero [3], overflow [2], negative [1], carry [0] |
+|Flag register	| 4 Bits: zero [3], overflow [2], negative [1], carry [0] |
 
 ## Instruction Format
 
