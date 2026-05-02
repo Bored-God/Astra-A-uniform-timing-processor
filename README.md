@@ -23,7 +23,7 @@ Astra is a minimal experimental processor architecture focused on datapath desig
 |Data memory(RAM)	  | 256 bytes, byte-addressable |
 |Stack depth	      | 256 entries, 8-bit wide |
 |Clock period	      | 2 ns (500 MHz, simulation only) |
-|Instruction size	  | 3 bytes (op_code, op1, op2) |
+|Instruction size	  | 3 bytes ('op_code', 'op1', 'op2') |
 |PC increment	      | +3 per cycle (non-branch) |
 |Flag register	| 4 Bits: zero [3], overflow [2], negative [1], carry [0] |
 
@@ -33,11 +33,11 @@ Each instruction is 3 bytes:
 
 | Byte | Description |
 |------|-------------|
-| op_code | Operation and unit select |
-| op1 | Source / immediate |
-| op2 | Destination / operand |
+| 'op_code' | Operation and unit select |
+| 'op1' | Source / immediate |
+| 'op2' | Destination / operand |
 
-The op_code byte is further subdivided as follows:
+The 'op_code' byte is further subdivided as follows:
 | Bit | Description|
 |------|-----------|
 |Bit [7] | mode select - 0 = calculation mode, 1 = move (MOV) mode |
@@ -46,7 +46,7 @@ The op_code byte is further subdivided as follows:
 |Bit [6] | unused in the current revision (reserved for future use) |
 
 ## Datapath Summary
-The Top module acts as the central decode and routing hub. On every clock cycle, the Programme block reads three bytes from program memory at the current PC address and presents them as op_code, op1, and op2. The Top module decodes op_code combinationally and asserts enable signals to exactly one functional unit per cycle. Results are written back to the register file or fed to the program counter on the next clock edge.
+The Top module acts as the central decode and routing hub. On every clock cycle, the Programme block reads three bytes from program memory at the current PC address and presents them as op_code, op1, and op2. The Top module decodes 'op_code' combinationally and asserts enable signals to exactly one functional unit per cycle. Results are written back to the register file or fed to the program counter on the next clock edge.
 
 <img width="624" height="384" alt="image" src="https://github.com/user-attachments/assets/d4444ed6-0868-423d-9e46-b85e1727c422" />
 
