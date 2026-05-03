@@ -49,11 +49,8 @@ module Top_test;
         pass_count = 0;
         fail_count = 0;
 
-        $display("=================================================");
         $display("  Astra CPU Testbench");
-        $display("=================================================");
 
-        // ---- Wait for reset / first instruction fetch --------
         repeat(2) @(posedge dut.clk);
 
         // TEST 1: IMM -> R0  (load 0x0A into r0)
