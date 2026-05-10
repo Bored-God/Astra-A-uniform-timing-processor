@@ -87,4 +87,4 @@ The design has been verified using **Xilinx Vivado** through:
 
 ## Documentation
 
-Full architecture report: [Astra Report](docs/Astra_Report.pdf)
+Full architecture report: [Astra Report](Docs/Astra_Report.pdf)
